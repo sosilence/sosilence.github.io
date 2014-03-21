@@ -1,8 +1,8 @@
 ---
 layout: default
 title:
-description: 这是 PIZn 的又一个博客，它是基于 Jekyll 搭建起来的。在这里，不仅仅是用来快速记录工作，学习，生活的一点一滴的地方，更是 PIZn 对 Jekyll 的学习和使用的一次有意义的实践。
-keywords: PIZn, GitHub, Jekyll, Plugins, Works, Archives, Quotes, Violet, css, html, javascript, wordpress, logo, design, geek
+description: 在终于厌倦了Wordpress的繁琐之后，终于选择了Jekyll，虽然这一刻我不知道这次迁移到底意味着什么，但是对于一个想要对生活认真，对自己负责的女程序员来说，这次变动，是向新的世界迈出的第一步。
+keywords: sosilence, GitHub, Jekyll, Plugins, Works, Archives, Quotes, Violet, css, html, javascript, wordpress, logo, design, geek
 ---
 <section class="lotus-logo fn-clear">
     <hgroup class="violet-site">
@@ -12,6 +12,7 @@ keywords: PIZn, GitHub, Jekyll, Plugins, Works, Archives, Quotes, Violet, css, h
 </section>
 <article class="lotus-article">
 {% for rpost in paginator.posts limit:1 %}
+<strong>{{ paginator.posts }}</strong>>
     <h3><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{{ rpost.description }}</p>
 {% endfor %}
