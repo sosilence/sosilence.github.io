@@ -6,8 +6,8 @@ paginate: 8
 safe: false
 
 #站点基础配置
-title: iLotus
-subTitle: Just another Jekyll blog.
+title: 飘落无声
+subTitle: 一个想变的文艺的女程序员.
 description: 在终于厌倦了Wordpress的繁琐之后，终于选择了Jekyll，虽然这一刻我不知道这次迁移到底意味着什么，但是对于一个想要对生活认真，对自己负责的女程序员来说，这次变动，是向新的世界迈出的第一步。
 url: http://sosilence.github.io/
 feed: /atom.xml
