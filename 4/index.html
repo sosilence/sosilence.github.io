@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Home
+title: Page 4
 category: home
+has_code: yes
 description: Jack Mottram's weblog 
 keywords: art, photography, design, fashion, web development, mottram
 ---
 <section>
-{% for post in site.posts limit: 10 %}{% if post.category == 'photo' %}
-<article class="photo">
+{% for post in site.posts limit: 10 offset: 30 %}{% if post.category == 'photo' %}
+<article>
 
 <header>
 <h1>{{ post.title }}</h1>
@@ -15,12 +16,13 @@ keywords: art, photography, design, fashion, web development, mottram
 
 {% include home_meta.html %}
 
-{% if post.imageurl %}<img alt="{{ post.title }}" title="{{ post.title }}" src="http://media.1tw.org/{{ post.imageurl }}" width="590" />{% endif %}
+{% if post.imageurl %}<img alt="{{ post.title }}" title="{{ post.title }}" src="http://dl.dropbox.com/u/84981/blog/{{ post.imageurl }}" width="590" />{% endif %}
 
 {{ post.content }}
 
 </article>
-{% endif %}{% if post.category == 'link' %}
+{% endif %}
+{% if post.category == 'link' %}
 <article class="link">
 
 <header>
@@ -30,10 +32,10 @@ keywords: art, photography, design, fashion, web development, mottram
 {% include home_meta.html %}
 
 {{ post.content }}
-
 </article>
-{% endif %}{% if post.category == 'video' %}
-<article class="video">
+{% endif %}
+{% if post.category == 'video' %}
+<article>
 <header>
 <h1>{{ post.title }}</h1>
 </header>
@@ -45,10 +47,11 @@ keywords: art, photography, design, fashion, web development, mottram
 </object>
 
 {{ post.content }}
-
 </article>
-{% endif %}{% if post.category == 'audio' %}
-<article class="audio">
+{% endif %}
+{% if post.category == 'audio' %}
+<article>
+
 <header>
 <h1>{{ post.title }}</h1>
 </header>
@@ -57,14 +60,14 @@ keywords: art, photography, design, fashion, web development, mottram
 
 <p id="audioplayer_1"><a title="Download the audio file" href="{{ post.audio_link }}">Download</a></p>  
 <script type="text/javascript">  
-AudioPlayer.embed("audioplayer_1", {soundFile: "{{ post.audio_link }}"});  
+        AudioPlayer.embed("audioplayer_1", {soundFile: "{{ post.audio_link }}"});  
 </script>
 
 {{ post.content }}
-
 </article>
-{% endif %}{% if post.category == 'basic'%}
-<article class="basic">
+{% endif %}
+{% if post.category == 'basic'%}
+<article>
 
 <header>
 <h1>{{ post.title }}</h1>
@@ -73,13 +76,14 @@ AudioPlayer.embed("audioplayer_1", {soundFile: "{{ post.audio_link }}"});
 {% include home_meta.html %}
 
 {{ post.content }}
-
 </article>
-{% endif %}{% endfor %}
+{% endif %}
+{% endfor %}
 </section>
 
 <nav>
 <ul class="more">
-<li><a title="Older posts" href="/2/">Older posts</a> &#8594;</li>
+<li>&#8592; <a title="The second page of posts" href="/3/">Newer posts</a></li>
+<li><a title="Onward to the archives" href="/archive/">Archives</a> &#8594;</li>
 </ul>
 </nav>
