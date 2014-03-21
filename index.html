@@ -12,7 +12,6 @@ keywords: sosilence, GitHub, Jekyll, Plugins, Works, Archives, Quotes, Violet, c
 </section>
 <article class="lotus-article">
 {% for rpost in paginator.posts limit:1 %}
-<strong>{{ paginator.posts }}</strong>>
     <h3><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{{ rpost.description }}</p>
 {% endfor %}
